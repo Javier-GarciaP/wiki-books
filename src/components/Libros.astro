@@ -1,0 +1,36 @@
+---
+import Contenedor from "./Contenedor.astro";
+import { getCollection } from "astro:content";
+const books = await getCollection("book");
+---
+
+<Contenedor>
+  <h1 class="text-5xl text-black font-bold">Libros Recomendado</h1>
+  <div class="container mt-2">
+    {
+      books.map((book) => {
+        const { id, data } = book;
+        const { title, bookcover } = data;
+        return (
+          <div>
+            <a href=`/books/${id}`>
+              <img
+              transition:name={`img-${book.id}`}
+              class="w-56 h-auto rounded-xl"
+              src={"src/content/book/img/" + bookcover} />
+            </a>
+            <h1 class="text-black font-bold text-2xl flex-1">{title}</h1>
+          </div>
+        );
+      })
+    }
+  </div>
+</Contenedor>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+</style>

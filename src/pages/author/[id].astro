@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const author = await getCollection("author");
+
+  return author.map((author) => ({
+    params: { id: author.id },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+const { data } = author;
+const { name } = data;
+---
+
+<h1>{name}</h1>
