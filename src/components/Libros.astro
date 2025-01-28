@@ -13,7 +13,7 @@ const books = await getCollection("book");
         const { title, bookcover } = data;
         return (
           <div>
-            <a href=`/books/${id}`>
+            <a href={`/books/${id}`}>
               <img
               transition:name={`img-${book.id}`}
               class="w-56 h-auto rounded-xl"
