@@ -45,14 +45,14 @@ const {
 <Layout />
 <Contenedor>
   <div class="md:flex flex-row justify-between mt-6">
-    <div class="md:w-1/2 flex-col mx-auto">
+    <div class="md:w-1/2 flex-col md:mx-auto">
       <a
-        class="no-underline mb-4 text-lg uppercase font-bold flex items-center gap-3"
+        class="md:text-lg no-underline mb-4 text-base uppercase font-bold flex items-center gap-3"
         href="/"><Back /> Retroceder</a>
       <img
         transition:name={`img-${id}`}
         class="w-80 h-auto rounded-xl"
-        src={"../content/book/img/" + bookcover}
+        src={`/book/${bookcover}`}
         alt=`Imagen del libro ${title}`
       />
       <div class="prose">
@@ -77,7 +77,7 @@ const {
         </ul>
       </div>
     </div>
-    <div class="md:w-1/2 flex justify-start flex-col gap-y-2 mx-auto">
+    <div class="md:w-1/2 flex justify-start flex-col gap-y-2 md:mx-auto">
       <h1 class="text-black text-4xl font-bold">{title}</h1>
       <div class="flex gap-2 flex-wrap">
         {
