@@ -45,17 +45,17 @@ const {
 <Layout />
 <Contenedor>
   <div class="md:flex flex-row justify-between mt-6">
-    <div class="md:w-1/2 flex-col md:mx-auto">
+    <div class="md:w-1/2 flex-col">
       <a
-        class="md:text-lg no-underline mb-4 text-base uppercase font-bold flex items-center gap-3"
+        class="md:text-lg no-underline mb-4 text-base uppercase font-bold flex items-center gap-3 md:m-0 mx-auto"
         href="/"><Back /> Retroceder</a>
       <img
         transition:name={`img-${id}`}
-        class="md:m-0 w-80 h-auto mx-auto rounded-xl"
+        class="md:m-0 mx-auto w-80 h-auto rounded-xl"
         src={`/book/${bookcover}`}
         alt=`Imagen del libro ${title}`
       />
-      <div class="prose">
+      <div class="prose md:m-0 mx-auto">
         <h2 class="text-lg text-black font-bold mt-4 mb-0">Detalles</h2>
         <ul class="list-none p-0 flex flex-col">
           <li class="flex gap-2"><Star /> valoracion {averagerating}/5</li>
@@ -77,9 +77,9 @@ const {
         </ul>
       </div>
     </div>
-    <div class="md:w-1/2 flex justify-start flex-col gap-y-2 md:mx-auto">
-      <h1 class="text-black text-4xl font-bold">{title}</h1>
-      <div class="flex gap-2 flex-wrap">
+    <div class="md:w-1/2 flex justify-start flex-col gap-y-2">
+      <h1 class="text-black text-4xl font-bold md:m-0 mx-auto">{title}</h1>
+      <div class="flex gap-2 flex-wrap md:m-0 mx-auto">
         {
           keywords.map((key: string) => {
             return (
@@ -90,7 +90,7 @@ const {
           })
         }
       </div>
-      <div class="prose text-lg">
+      <div class="prose text-lg md:m-0 mx-auto font-black">
         <Content />
       </div>
     </div>
