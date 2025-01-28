@@ -19,8 +19,8 @@
 
 [ ] Agregar al navar:
 
-- [ ] Pestaña de libros 
+- Pestaña de libros 
 
-- [ ] Pestaña de autores
+- Pestaña de autores
 
 [ ] Ajustar interfaz móvil
