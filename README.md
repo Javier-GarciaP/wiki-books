@@ -2,7 +2,7 @@
 
 ## Problemas a corregir:
 
-[ ] Corregir rutas dinámicas a las imágenes
+[x] Corregir rutas dinámicas a las imágenes
 
  ## Agregar:
 
@@ -13,7 +13,7 @@
 
 [ ] Editar navar, quitar enlaces e iconos innecesarios
 
-[ ] En el navar scren móvil, dejar iconos y ocultar enlaces de texto
+[x] En el navar scren móvil, dejar iconos y ocultar enlaces de texto
 
 [ ] Agregar un filtro de libros
 
@@ -23,4 +23,4 @@
 
 - Pestaña de autores
 
-[ ] Ajustar interfaz móvil
+[x] Ajustar interfaz móvil
